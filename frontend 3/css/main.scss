@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Prata&display=swap');
+
+/*      General Setting
+/*---------------------------*/
+
+body {
+    margin: 0;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Prate", "Lato", "arial";
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+
+/* Text setting
+/*--------------------*/
+
+h1 {
+    font-size: 100%;
+}
+
+h2 {
+    font-size: 80%;
+}
+
+h3 {
+    color: rgb(199, 199, 199);
+    font-size: 70%;
+}
+
+p {
+    font-family: "Lato", "arial";
+    margin-top: 0;
+    font-size: 65%;
+    margin-bottom: 2em;
+    line-height: 1.4em;
+}
+
+.outer {
+    padding: 1.5em;
+}
+
+section {
+    column-count: 1;
+    column-gap: 0.7em;
+}
+
+img {
+    width: 100%;
+    margin: 0.7em 0 1em;
+}
+
+@media only screen and (min-width:768px) {
+    body {
+        text-align: left;
+    }
+    h1 {
+        margin: 2em 0 1em;
+    }
+    h2 {
+        font-size: 80%;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        color: rgb(199, 199, 199);
+        &::before {
+            content: ' ';
+            position: absolute;
+            background: #46059c;
+            z-index: -1;
+            width: 50%;
+            height: 5px;
+            bottom: -.4em;
+            left: -3em;
+            border-radius: 1em 3em 0 1em;
+        }
+    }
+    h3 {
+        color: rgb(199, 199, 199);
+        margin: 1.5em 0 1em;
+    }
+    p {
+        font-size: 60%;
+        line-height: 1.6em;
+    }
+    img {
+        width: 100%;
+    }
+    section {
+        column-count: 2;
+        column-rule-color: rgb(54, 54, 54);
+        column-rule-style: solid;
+    }
+    section>* {
+        margin-top: 0;
+    }
+    .outer {
+        padding: 1.5em;
+    }
+    article {
+        padding: 2em;
+        background: #181818;
+        border-radius: 5px;
+    }
+    .secondary {
+        margin-top: 2em;
+    }
+    p.span-all {
+        column-span: all;
+        text-align: center;
+        font-size: 85%;
+        color: #ffffff;
+        padding: 0.5em;
+        margin: 1em 0;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .outer {
+        margin: 0 auto;
+        width: 80%;
+    }
+    section {
+        column-count: 3;
+    }
+}

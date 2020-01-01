@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider</title>
+</head>
+<link rel="stylesheet" href="css/main.css">
+
+<body>
+    <div class="container">
+        <div class="slider slider1"></div>
+        <div class="slider slider2" id="slide"></div>
+    </div>
+</body>
+<script>
+    let slide = document.getElementById('slide');
+    window.onmousemove = function(e) {
+        var x = e.clientX;
+        slide.style.left = x + "px";
+    }
+</script>
+
+</html>

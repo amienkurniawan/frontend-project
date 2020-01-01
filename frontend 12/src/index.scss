@@ -1,0 +1,147 @@
+        @import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Muli&display=swap');
+        body {
+            margin: 0;
+            background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+        }
+        
+        .wrapper {
+            height: 90vh;
+            width: 80vw;
+            max-width: 1100px;
+            margin: 1rem auto;
+            background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+            box-shadow: 1px 3px 20px rgba(0, 0, 0, .0);
+            border-radius: 0.2rem;
+            position: relative;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            overflow: hidden;
+            height: 100%;
+            .title {
+                width: 90%;
+                text-align: center;
+                padding: 2rem;
+                margin: 9rem auto;
+                z-index: 9999;
+            }
+            h1 {
+                font-family: "Lexend Deca", "Lato", "Arial", sans-serif;
+                font-size: 3rem;
+                color: aliceblue;
+            }
+            p {
+                font-family: "Muli", sans-serif;
+                color: #fff;
+            }
+        }
+        
+        button {
+            font-family: 'Muli', sans-serif;
+            font-size: 1rem;
+            padding: 0.8rem 2.3rem;
+            border-radius: 3rem;
+            border: 0;
+            cursor: pointer;
+        }
+        
+        // car animation
+        .night {
+            height: 560px;
+            width: 700px;
+            background: url('assets/background.png');
+            background-size: cover;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        .surface {
+            height: 140px;
+            width: 500%;
+            display: block;
+            background: url('assets/Img_02.png');
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-repeat: repeat-x;
+        }
+        
+        .moveRight {
+            animation: moveRight 10s linear infinite;
+        }
+        
+        @keyframes moveRight {
+            100% {
+                transform: translateX(-2200px);
+            }
+        }
+        
+        // car
+        .car {
+            position: absolute;
+            bottom: 43px;
+            left: 24%;
+        }
+        
+        .suspension {
+            animation: suspension 1s linear infinite;
+        }
+        
+        @keyframes suspension {
+            100% {
+                transform: translateY(-1px);
+            }
+            50% {
+                transform: translateY(1px);
+            }
+            0% {
+                transform: translateY(-1px);
+            }
+        }
+        
+        .clip-svg {
+            clip-path: url(#myclip);
+        }
+        
+        .mobile-view,
+        .tablet-view {
+            position: absolute;
+            top: 0%;
+            display: none;
+            img {
+                width: 100%;
+            }
+        }
+        
+        @media only screen and (max-width:990px) {
+            .view {
+                display: none;
+            }
+            .tablet-view {
+                display: block;
+            }
+            .container {
+                grid-template-columns: 100%;
+                .title {
+                    margin: 3rem 1rem;
+                    padding: 0.9rem;
+                }
+            }
+        }
+        
+        @media only screen and (max-width:678px) {
+            .tablet-view {
+                display: none;
+            }
+            .mobile-view {
+                display: block;
+            }
+        }
+        
+        @media only screen and (max-width:417px) {
+            .mobile-view {
+                display: none;
+            }
+        }

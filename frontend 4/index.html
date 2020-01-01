@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frontend 3</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="" class="logo">NatureComp</a>
+            <nav>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/menu.svg" alt="menu">
+            </nav>
+        </header>
+        <h1 class="lax" data-lax-translate-y="0 0, 400 -400">Preserve Nature</h1>
+        <div class="line lax" data-lax-opacity="0 1,100 0"></div>
+    </div>
+    <div class="container secondary lax" data-lax-translate-y="0 0, 400 -400" data-lax-opacity="0 0, 100 1 ">
+        <h2>Strategic</h2>
+        <p class="subtext">Alliance</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates delectus autem quisquam animi dolor atque numquam sed quia, eveniet doloremque incidunt et ratione sequi tempora! Blanditiis eos itaque quibusdam perspiciatis!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates delectus autem quisquam animi dolor atque numquam sed quia, eveniet doloremque incidunt et ratione sequi tempora! Blanditiis eos itaque quibusdam perspiciatis!</p>
+    </div>
+    <img src="img/mountains.png" alt="Mountains" class="mountains lax" data-lax-translate-y="0 1, 400 -100">
+    <img src="img/forest.png" alt="Trees" class="trees lax" data-lax-translate-y="0 1, 400 -260">
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+    <script>
+        window.onload = function() {
+            lax.setup() // init
+
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+
+            window.requestAnimationFrame(updateLax)
+        }
+    </script>
+</body>
+
+</html>
