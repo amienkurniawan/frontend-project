@@ -1,2 +1,5 @@
 import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import gambar from '../../img/about.jpg';
+
+var images = document.getElementById("images");
+images.src = gambar; 
