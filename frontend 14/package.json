@@ -1,5 +1,5 @@
 {
-	 "devDependencies": {
+    "devDependencies": {
         "@babel/core": "^7.7.7",
         "babel-loader": "^8.0.6",
         "clean-webpack-plugin": "^3.0.0",
@@ -15,17 +15,18 @@
         "terser-webpack-plugin": "^2.3.1",
         "uglifyjs-webpack-plugin": "^2.2.0"
     },
-  "name": "frontend-14",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --open --hot",
+    "name": "frontend-14",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --config webpack.config.js --open --hot",
         "build": "webpack --config webpack-production.config.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "^4.4.1",
         "webpack": "^4.37.0",
         "webpack-cli": "^3.3.10",
         "webpack-dev-server": "^3.10.1"
